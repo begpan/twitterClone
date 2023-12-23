@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#auth-page {
+  min-height: 100vh;
+  background: rgb(30, 30, 30);
+  display: grid;
+  place-items: center;
+}
+
+#auth-page form {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+  padding: 60px 80px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  gap: 30px;
+}
+@media (max-width: 670px) {
+  #auth-page form {
+    width: 100%;
+    min-width: unset;
+    height: 100vh;
+    justify-content: center;
+    border-radius: 0px;
+  }
+}
+#auth-page form img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+}
+#auth-page form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#auth-page form input {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  outline: none;
+}
+#auth-page form input:focus {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.685);
+  outline: 1px solid #1da1f2;
+}
+#auth-page form button {
+  width: 100%;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 8px;
+  font-family: "Poppins";
+}
+#auth-page form .name-warning,
+#auth-page form .pass-warning {
+  height: 45px;
+}
+#auth-page form .name-warning p,
+#auth-page form .pass-warning p {
+  width: 100%;
+  background: #f8d7da;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: black;
+  margin-top: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  filter: brightness(60%);
+}/*# sourceMappingURL=style.css.map */

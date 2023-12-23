@@ -1,0 +1,19 @@
+
+// tablet ekranlarına kadar
+
+@mixin sm {
+    @media (max-width: 670px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: 1300px) {
+        @content;
+    }
+}

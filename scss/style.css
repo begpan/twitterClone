@@ -70,6 +70,96 @@
   margin-top: 10px;
 }
 
+#loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.wrapper {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 0.5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 40px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 0.5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,4 +185,303 @@ button {
 
 button:hover {
   filter: brightness(60%);
+}
+
+#feed {
+  min-height: 100vh;
+  font-family: "poppins";
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr;
+}
+@media (max-width: 670px) {
+  #feed {
+    grid-template-columns: 1fr 5fr 0;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 670px) {
+  nav {
+    align-items: center;
+  }
+}
+@media (min-width: 1000px) {
+  nav {
+    align-items: end;
+    margin-right: 50px;
+  }
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+@media (max-width: 1000px) {
+  nav ul {
+    align-items: end;
+    padding: 10px 5px !important;
+  }
+}
+nav ul img {
+  width: 80px;
+}
+@media (max-width: 1000px) {
+  nav ul img {
+    width: 50px;
+  }
+}
+nav ul li {
+  margin: 5px;
+  display: flex;
+  font-size: 19px;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+nav ul li:hover {
+  background-color: rgb(60, 60, 60);
+}
+nav ul li:last-child {
+  background-color: #1da1f2;
+  padding: 10px 10px;
+}
+@media (max-width: 670px) {
+  nav ul li:last-child {
+    padding: 10px 5px;
+  }
+}
+nav ul a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+nav ul i {
+  color: white;
+}
+@media (max-width: 1000px) {
+  nav ul i {
+    font-size: 23px;
+  }
+}
+nav ul span {
+  color: white;
+}
+@media (max-width: 1000px) {
+  nav ul span {
+    display: none;
+  }
+}
+nav .user-info {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 0 10px;
+}
+@media (max-width: 1000px) {
+  nav .user-info {
+    flex-direction: column;
+    align-items: end;
+  }
+}
+nav .user-info img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+@media (max-width: 1000px) {
+  nav .user-info img {
+    width: 50px;
+    height: 50px;
+  }
+}
+nav .user-info button {
+  font-size: 16px;
+  padding: 4px 10px;
+  display: flex;
+  gap: 5px;
+}
+@media (max-width: 1000px) {
+  nav .user-info button {
+    font-size: 18px;
+    padding: 6px 16px;
+  }
+}
+nav .user-info span, nav .user-info p {
+  white-space: nowrap;
+}
+@media (max-width: 1000px) {
+  nav .user-info span, nav .user-info p {
+    display: none;
+  }
+}
+
+main {
+  border: 2px solid rgb(60, 60, 60);
+  overflow: auto;
+  height: 100vh;
+}
+main header {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 21px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+main #post-tweet {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+main::-webkit-scrollbar {
+  background-color: black;
+  width: 5px;
+}
+main::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+main img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main .input-area {
+  width: 100%;
+}
+main .input-area input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+main .input-area .button-area {
+  display: flex;
+  justify-content: end;
+}
+main .input-area button {
+  border-radius: 60px;
+  background: #1da1f2;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+main .input-area button:hover {
+  background: rgb(74, 186, 255);
+}
+
+.tweets-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+.tweet #user-img {
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 670px) {
+  .tweet #user-img {
+    display: none;
+  }
+}
+.tweet #mobile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: none;
+}
+@media (max-width: 670px) {
+  .tweet #mobile-img {
+    display: block;
+  }
+}
+.tweet .body {
+  width: 100%;
+  margin-top: 10px;
+}
+.tweet .body .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tweet .body .user a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.tweet .body .user a p {
+  color: gray;
+}
+@media (max-width: 670px) {
+  .tweet .body .user a p {
+    font-size: 14px;
+  }
+}
+.tweet .body .content {
+  margin-top: 10px;
+}
+.tweet .body .content img, .tweet .body .content video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  height: 100%;
+  max-height: 600px;
+  margin-top: 5px;
+}
+
+.tweet .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.tweet .buttons button {
+  background: none;
+  color: gray;
+}
+@media (max-width: 670px) {
+  .tweet .buttons button {
+    font-size: 14pxs;
+  }
+}
+.tweet .buttons button:nth-child(1):hover {
+  color: #1da1f2;
+  background-color: rgba(0, 0, 255, 0.386);
+}
+.tweet .buttons button:nth-child(2):hover {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.373);
+}
+.tweet .buttons button:nth-child(3):hover {
+  color: pink;
+  background-color: rgba(255, 192, 203, 0.387);
+}
+.tweet .buttons button:nth-child(4):hover {
+  color: #1da1f2;
+  background-color: rgba(0, 0, 255, 0.315);
+}
+
+@media (max-width: 1000px) {
+  aside {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

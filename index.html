@@ -1,13 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X | Join Us</title>
-    <link rel="shortcut icon" href="img/x-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/scss/style.css">
-</head>
-<body>
-<script type="module" src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X | Anasayfa</title>
+    <link rel="shortcut icon" href="img/x-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body id="feed">
+    <!-- sol ksıım -->
+    <nav>
+      <ul>
+        <img src="img/x-logo.png" alt="" />
+
+        <li>
+          <a href="/">
+            <i class="bi bi-house-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="bi bi-search"></i>
+            <span>Explore</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="bi bi-bell-fill"></i>
+            <span>Notifications</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="bi bi-bookmark-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="bi bi-envelope-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="bi bi-send-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- kullanıcı bilgileri-->
+
+      <div class="user-info">
+        <img id="profile-pic" src="img/x-logo.png" />
+
+        <div>
+          <p id="user-name">Beg Pan</p>
+          <p id="user-tag">@begpan</p>
+          <button id="logout-btn">
+            <i class="bi bi-door-open-fill"></i>
+            <span>Log out</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- orta kısım -->
+    <main>
+      <header>Anasayfa</header>
+      <form id="post-tweet">
+        <img src="/img/defaultt.png" id="profile-pic" />
+        <div class="input-area">
+          <input type="text" placeholder="neler oluyor?" />
+          <div class="button-area">
+            <button>Tweetle</button>
+          </div>
+        </div>
+      </form>
+
+      <section class="tweets-area">
+        <!-- <div class="tweet">
+          <img id="user-img" src="/img/defaultt.png" />
+          <div class="body">
+            <div class="user">
+              <a>
+                <img id="mobile-img" src="/img/defaultt.png" />
+
+                <b>deneme</b>
+                <p>@deneme</p>
+                <p>20 saat önce</p>
+                <i class="bi bi-three-dots"></i>
+              </a>
+            </div>
+
+            <div class="content">
+              <p>atilan tweet yazisi</p>
+              <img
+                src="https://pbs.twimg.com/media/GB4is2BaEAANddZ?format=jpg&name=4096x4096"
+              />
+            </div>
+            <div class="buttons">
+              <button>
+                <i class="bi bi-chat"></i>
+                <span>456</span>
+              </button>
+              <button>
+                <i class="bi bi-recycle"></i>
+                <span>456</span>
+              </button>
+              <button>
+                <i class="bi bi-heart"></i>
+                <span>456</span>
+              </button>
+              <button>
+                <i class="bi bi-bookmark"></i>
+                <span>456</span>
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+    <!-- sağ kısım -->
+    <aside>sağ</aside>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

@@ -2,6 +2,7 @@
 @import "responsive";
 @import "auth";
 @import "loader";
+@import "user";
 
 * {
   margin: 0;
@@ -314,6 +315,10 @@ main{
 
     .content{
       margin-top: 10px;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+
       img, video{
         width: 100%;
         object-fit: cover;
@@ -379,8 +384,122 @@ main{
 // sağ kısım
 
 aside{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+
   @include md {
     display: none;
   }
+
+  form{
+    background: rgb(40, 40, 40);
+    padding: 5px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 40px;
+    color: gray;
+
+    input{
+      background: none;
+      font-family: 'poppins';
+      border: none;
+      outline: none;
+      color: rgb(188, 187, 187);
+    }
+  }
 }
 
+
+// !! DETAY SAYFASI İÇİN
+
+
+
+
+.nav{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  i {
+    font-size: 21px;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    &:hover{
+      background-color: rgba(80, 80, 80);
+    }
+  }
+  h4{
+    font-size: 20px;
+  }
+}
+
+.detail-tweet {
+  padding: 20px;
+
+  .user{
+    img{
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .content{
+    margin-top: 30px !important;
+  }
+
+
+  .info{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+
+    p:nth-child(1){
+      color: gray;
+    }
+
+    p:nth-child(2){
+      span:nth-child(2){
+        color: gray;
+      }
+
+
+    }
+
+
+  }
+}
+
+#comment-form{
+  display: flex;
+  padding: 20px;
+  gap:10px;
+  img{
+    border-radius: 50%;
+  }
+
+  input{
+    flex: 1;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+  
+  }
+
+  button{
+    background-color: $blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+}

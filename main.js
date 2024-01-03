@@ -5,7 +5,8 @@ import {
   renderTimeline,
   renderLoader,
   renderDetailLoader,
-  renderDetail
+  renderDetail,
+  renderUser
 } from "./scripts/ui.js";
 import API from "./scripts/api.js";
 // local storagedan bilgileri al
@@ -43,8 +44,25 @@ const router = () => {
       break;
     //  kullanıcı detay sayfası
     case "user":
+      // sayfanın yuklendiğini belirt
 
-    
+    renderDetailLoader(query)
+    // kullanıcı bilgilkerini apıden al
+
+    API.getUser(query)
+    .then((user) =>{
+
+      renderUser(user)
+        console.log('ekrana  bilgiler basıldı')
+        // tweetlerin gelecegı yeri secme
+        const outlet = document.querySelector(".page-bottom")
+        // kullanıcınn attıgı tweetleri al
+        API.getData(`/timeline.php?screenname=${query}`).then(
+          (data) => renderTimeline(data, outlet, 'author')
+        )
+   
+    })
+
       break;
 
     // varsayılan olarak anasayfayı ekrana bas
@@ -108,3 +126,6 @@ ele.searchForm.addEventListener("submit", (e)=>{
   // sayfayı değiş
   location = `?page=search&q=${query}`
 })
+
+
+

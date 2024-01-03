@@ -199,3 +199,109 @@ export const renderDetail = (tweet,user) => {
   `
 
 }
+
+
+// kullanıcı sayfasını ekrana basar
+
+export const renderUser = (user) => {
+  ele.main.innerHTML = `
+  <div class="user-page">
+    <!-- üst kısım -->
+    <div class="page-top">
+       <!-- nav -->
+       <div id="nav">
+        <i id="back-btn" class="bi bi-arrow-left"></i>
+        <div>
+          <h3>${user.name}</h3>
+          <p>
+            <span>${Math.round(Math.random() * 1200)}</span>
+            <span>gonderi</span>
+          </p>
+
+        </div>
+      </div>
+      <!-- banner -->
+
+      <div class="banner">
+        <img src="${user.header_image}" alt="">
+        <img id="user-pp" src="${user.avatar}" alt="">
+      </div>
+
+      <!-- buttons -->
+      <div class="buttons">
+        <div class="icon">
+          <i class="bi bi-three-dots"></i>
+        </div>
+        <div class="icon">
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+        <button>Follow</button>
+      </div>
+
+      <!-- kullanıcı bilgileri -->
+      <div class="info">
+        <h4>
+          <span>${user.name}</span>
+          ${user.blue_verified ? '<i class="bi bi-patch-check-fill"></i>' : ''}
+          
+        </h4>
+        <p class="profile">@${user.profile}</p>
+        <p class="description">
+        ${user.name}
+        </p>
+
+        <div>
+          <a href="">
+            <span>${user.friends}</span>
+            <span>Following</span>
+          </a>
+          <a href="">
+            <span>${user.sub_count}</span>
+            <span>Followers</span>
+          </a>
+        </div>
+      </div>
+
+       <!-- butonlar -->
+       <div class="radio-input">
+        <label>
+        <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
+        <span>Gönderiler</span>
+        </label>
+        <label>
+          <input value="value-2" name="value-radio" id="value-2" type="radio">
+        <span>Yanıtlar</span>
+        </label>
+        <label>
+          <input value="value-3" name="value-radio" id="value-3" type="radio">
+        <span>Medya</span>
+        </label>
+        <label>
+          <input value="value-3" name="value-radio" id="value-3" type="radio">
+        <span>Beğeni</span>
+        </label>
+        <span class="selection"></span>
+      </div>
+       
+
+    </div>
+    <!-- alt kısım -->
+
+    <div class="page-bottom">
+      <div id="loader-wrapper">
+        <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div> </div>
+     
+    </div>
+
+
+
+  </div>`
+
+}

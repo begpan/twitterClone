@@ -59,7 +59,7 @@ export const renderTimeline = (data, outlet, user) =>{
         <b>${tweet[user]?.name}</b>
         <p>${tweet[user]?.screen_name}</p>
         <p>${moment(tweet.created_at).fromNow()}</p>
-        <i class="bi bi-three-dots"></i> </a> ` : `<p>Retweet edildi </p>`
+        <i class="bi bi-three-dots"></i> </a> ` : `<p>Reposted </p>`
        }
 
      
@@ -141,7 +141,7 @@ export const renderDetailLoader  = (text)=>{
 export const renderDetail = (tweet,user) => {
   ele.main.innerHTML = `   <div class="nav">
   <i id="back-btn" class="bi bi-arrow-left"></i>
-  <h4>Gönderi<h4>
+  <h4>Post<h4>
   </div>
 
   <div class="tweet detail-tweet">
@@ -154,7 +154,7 @@ export const renderDetail = (tweet,user) => {
           <b>${tweet.author.name}</b>
           <p>${tweet.author.screen_name}</p>
         </a>
-        <button>Takip et</button>
+        <button>Follow</button>
       </div>
 
       <div class="content">
@@ -164,7 +164,7 @@ export const renderDetail = (tweet,user) => {
 
       <div class="info">
         <p>2 ocak 2024 23:00</p>
-        <p><span>1.9m</span> <span>görüntülenme</span></p>
+        <p><span>1.9m</span> <span>views</span></p>
       </div>
 
       <div class="buttons">
@@ -192,8 +192,8 @@ export const renderDetail = (tweet,user) => {
 
   <form id="comment-form">
     <img src="${user.avatar}" alt="">
-    <input type="text" placeholder="yorum yaz">
-    <button>Yanıtla</button>
+    <input type="text" placeholder="Post your reply">
+    <button>Reply</button>
   </form>
   
   `
@@ -215,7 +215,7 @@ export const renderUser = (user) => {
           <h3>${user.name}</h3>
           <p>
             <span>${Math.round(Math.random() * 1200)}</span>
-            <span>gonderi</span>
+            <span>posts</span>
           </p>
 
         </div>
@@ -266,19 +266,19 @@ export const renderUser = (user) => {
        <div class="radio-input">
         <label>
         <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
-        <span>Gönderiler</span>
+        <span>Posts</span>
         </label>
         <label>
           <input value="value-2" name="value-radio" id="value-2" type="radio">
-        <span>Yanıtlar</span>
+        <span>Replies</span>
         </label>
         <label>
           <input value="value-3" name="value-radio" id="value-3" type="radio">
-        <span>Medya</span>
+        <span>Media</span>
         </label>
         <label>
           <input value="value-3" name="value-radio" id="value-3" type="radio">
-        <span>Beğeni</span>
+        <span>Likes</span>
         </label>
         <span class="selection"></span>
       </div>

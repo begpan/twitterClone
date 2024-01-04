@@ -11,3 +11,6 @@ It is a clone project created with java script.
 -Accessing tweet data regarding the search feature<br>
 
 <h3>Screen Gif</h3>
+
+
+X![Jan-04-2024 17-04-06](https://github.com/begpan/twitterClone/assets/145170180/0a29bacc-63ec-4cc9-ab43-41cceb43e39e)

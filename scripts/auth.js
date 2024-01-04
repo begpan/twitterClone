@@ -26,7 +26,7 @@ const checkValues = (name, pass) => {
 
   if (!name.trim()) {
     isNameError = true;
-    authEle.nameWarn.innerHTML = `<p class=>Bu isimde kullanıcı bulunamadı</p>`;
+    authEle.nameWarn.innerHTML = `<p class=>Wrong! Please enter a valid username</p>`;
   } else {
     isNameError = false;
     authEle.nameWarn.innerHTML = " ";
@@ -35,13 +35,13 @@ const checkValues = (name, pass) => {
 
   if (!pass.trim()) {
     isPassError = true;
-    authEle.passWarn.innerHTML = `<p>Lütfen şifre giriniz</p>`;
+    authEle.passWarn.innerHTML = `<p>Enter a password</p>`;
   } else if (pass.length < 8) {
     isPassError = true;
-    authEle.passWarn.innerHTML = `<p>Şifre en az 8 haneli olmalı</p>`;
+    authEle.passWarn.innerHTML = `<p>Password must contain at least 8 characters</p>`;
   } else if (!pass.match(regex)) {
     isPassError = true;
-    authEle.passWarn.innerHTML = `<p>şifre yeterince güçlü değil</p>`;
+    authEle.passWarn.innerHTML = `<p>Include at least one of the following special characters!#$<12{!]</p>`;
   } else {
     isPassError = false;
     authEle.passWarn.innerHTML = "";
@@ -73,7 +73,7 @@ authEle.loginForm.addEventListener("submit", (e) => {
       .then((data) => {
         // eğer kullanıcı bulunamadıysa
         if (data.status === "error") {
-          authEle.nameWarn.innerHTML = `<p class=>Bu isimde kullanıcı bulunamadı</p>`;
+          authEle.nameWarn.innerHTML = `<p class=>Wrong!Please try again</p>`;
         } else {
           // kullanıcı bulunduysa locale kaydet 
 

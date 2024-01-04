@@ -37,7 +37,7 @@ const router = () => {
       break;
     // arama sayfası
     case "search":
-      renderDetailLoader(`${query} için sonuçlar`)
+      renderDetailLoader(`Results for ${query}`)
       API.getData(`/search.php?query=${query}&search_type=top`)
       .then((data) =>renderTimeline(data, ele.main , "user_info"))
 

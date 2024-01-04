@@ -314,19 +314,6 @@
   text-align: center;
 }
 
-/* light mode styles */
-body.twitter-mode {
-  --bg-color: $blue;
-  --text-color: #ffffff;
-}
-
-/* dark mode styles */
-body.x-mode {
-  --bg-color: #1a1a1a;
-  --text-color: #ffffff;
-}
-
-/* other styles */
 * {
   margin: 0;
   padding: 0;

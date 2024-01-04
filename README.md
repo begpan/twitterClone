@@ -1,6 +1,13 @@
-# twitterClone
 
-I'm still working on it
+<h2>Twitter Clone</h2>
 
+It is a clone project created with java script.
 
-https://momentjs.com/  ile api tarih verilerini tarihini güncelledik
+<h3>Main Features</h3>
+
+-Real user tweets, profile photo cover photo, like retweet and comment datareceived with API data.<br>
+-A realistic user interface login screen<br>
+-Fully responsive design<br>
+-Accessing tweet data regarding the search feature<br>
+
+<h3>Screen Gif</h3>

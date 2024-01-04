@@ -1,5 +1,5 @@
 
-<h2>Twitter Clone </h2>
+<h2>Twitter Clone</h2>
 
 It is a clone project created with java script.
 
